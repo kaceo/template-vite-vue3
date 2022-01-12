@@ -1,0 +1,61 @@
+colone:
+  -
+    href: /features
+    name: Features
+  -
+    href: /local
+    name: Local
+  -
+    href: /gopremium
+    name: Subscription
+  -
+    href: /about
+    name: About
+  -
+    href: /careers
+    name: Careers
+  -
+    href: https://support.strava.com
+    name: Support
+  -
+    href: https://business.strava.com
+    name: Business
+  -
+    href: /legal/terms
+    name: Terms
+  -
+    href: /legal/privacy
+    name: Privacy
+
+
+coltwo:
+  -
+    icon: icon-facebook
+    href: https://www.facebook.com/Strava
+    name: Facebook
+  -
+    icon: icon-instagram
+    href: https://www.instagram.com/strava
+    name: Instagram
+  -
+    icon: icon-twitter
+    href: https://www.twitter.com/strava
+    name: Twitter
+  -
+    icon: icon-share
+    href: https://www.youtube.com/stravainc
+    name: YouTube
+  -
+    icon: icon-share
+    href: https://blog.strava.com
+    name: Blog
+
+
+colthree:
+  -
+    href: /register/free?cta=sign-up&element=global-footer&source=website_show
+    name: Sign Up
+  -
+    href: /login
+    name: Log In
+

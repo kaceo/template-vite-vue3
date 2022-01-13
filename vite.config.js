@@ -6,24 +6,7 @@ import Content from '@originjs/vite-plugin-content'
 
 
 export default {
-  plugins: [
-    Vue({
-      include: [
-        /\.vue$/,
-        /\.md$/,
-      ],
-    }),
-    Pages({
-      extensions: ['vue', 'md'],
-/*      dirs: [
-        { dirs: "src/pages", baseRoute: "" },
-        { dirs: "src/hidden", baseRoute: "v"},
-      ],
-    */    }),
-    Markdown(),
-    Content(),
-  ],
-
+  base: '/vite-vue/',
   server: {
     host: true,
   },
@@ -32,12 +15,31 @@ export default {
     minify: false,
     emptyOutDir: true,
   },
-  // base: '/repo/', -- for GHPages
-  //
+
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+
+  plugins: [
+    Vue({
+      include: [ /\.vue$/, /\.md$/, ],
+    }),
+
+    Pages({
+      extensions: ['vue', 'md'],
+/*      dirs: [
+        { dirs: "src/pages", baseRoute: "" },
+        { dirs: "src/hidden", baseRoute: "v"},
+      ], */
+      routeBlockLang: 'yaml',
+
+    }),
+    Markdown(),
+    Content(),
+  ],
+
+  //
 
 }

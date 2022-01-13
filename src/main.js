@@ -7,8 +7,9 @@ import "bootstrap"
 
 import routes from "~pages";
 const router = createRouter({
+  // base:
   //history: createWebHashHistory(),
-  history: createWebHistory(),
+  history: createWebHistory( import.meta.env.BASE_URL, ),
   routes,
 })
 

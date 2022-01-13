@@ -1,3 +1,21 @@
+<script>
+import footmenus from './footmenu.yaml';
+
+export default {
+  name: 'FootMenu',
+  data() {
+    return {
+      'menus': footmenus,
+      'dest':
+        'legal-privacy'
+        //'https://google.com',
+        //'about',
+        //"{name: 'about'}",
+    }
+  },
+}
+</script>
+
 <template lang="pug">
 footer.footer
   .container
@@ -11,7 +29,8 @@ footer.footer
         h5 Menu
         ul.list-nav.nav-2-col
           li(v-for="i in menus.colone")
-            a(:href="i.href") {{i.name}}
+            a(v-if="i.href" :href="i.href") {{i.name}}
+            router-link(v-else :to="{name: i.nref}") {{i.name}}
 
       .col-sm-3.nav-group
         h5 Follow
@@ -25,19 +44,8 @@ footer.footer
         h5 Get Started
         ul.list-nav
           li(v-for="i in menus.colthree")
-            a(:href="i.href") {{i.name}}
+            a(v-if="i.href" :href="i.href") {{i.name}}
+            router-link(v-else :to="{name: i.nref}") {{i.name}}
 </template>
 
 
-<script>
-import footmenus from './footmenu.yaml';
-
-export default {
-  name: 'FootMenu',
-  data() {
-    return {
-      'menus': footmenus,
-    }
-  },
-}
-</script>

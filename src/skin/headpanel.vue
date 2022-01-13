@@ -1,3 +1,8 @@
+<script>
+export default {
+};
+</script>
+
 <template lang="pug">
 header.header
   .container.header-content
@@ -10,7 +15,3 @@ header.header
 </template>
 
 
-<script>
-export default {
-};
-</script>

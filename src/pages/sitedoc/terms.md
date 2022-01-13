@@ -1,3 +1,10 @@
+---
+---
+<route>
+name: legal-terms
+path: /legal/terms
+</route>
+
 # Strava Terms of Service
 Effective Date: December 15, 2020
 

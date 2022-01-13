@@ -1,18 +1,18 @@
 colone:
   -
-    href: /features
-    name: Features
-  -
-    href: /local
-    name: Local
-  -
-    href: /gopremium
-    name: Subscription
-  -
-    href: /about
+    nref: about
     name: About
   -
-    href: /careers
+    nref: features
+    name: Features
+  -
+    nref: local
+    name: Local
+  -
+    nref: gopremium
+    name: Subscription
+  -
+    nref: careers
     name: Careers
   -
     href: https://support.strava.com
@@ -21,10 +21,10 @@ colone:
     href: https://business.strava.com
     name: Business
   -
-    href: /legal/terms
+    nref: legal-terms
     name: Terms
   -
-    href: /legal/privacy
+    nref: legal-privacy
     name: Privacy
 
 

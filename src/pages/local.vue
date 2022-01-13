@@ -1,3 +1,3 @@
 <template lang="pug">
-h2 Contact Us
+h2 Local
 </template>

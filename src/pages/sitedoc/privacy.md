@@ -1,6 +1,10 @@
 ---
-
 ---
+<route>
+name: legal-privacy
+path: /legal/privacy
+</route>
+
 
 # Strava Privacy Policy
 Effective Date: July 7, 2021

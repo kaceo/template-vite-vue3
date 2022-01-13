@@ -1,5 +1,5 @@
 import { o as openBlock, c as createElementBlock } from "./vendor.2beb0069.js";
-import { _ as _export_sfc } from "./index.db642b18.js";
+import { _ as _export_sfc } from "./index.857c1ed8.js";
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("h2", null, "Features");
 }

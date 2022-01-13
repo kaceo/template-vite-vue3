@@ -1,4 +1,4 @@
-import { _ as _export_sfc } from "./index.db642b18.js";
+import { _ as _export_sfc } from "./index.857c1ed8.js";
 import { o as openBlock, c as createElementBlock, a as createBaseVNode, t as toDisplayString, F as Fragment, e as createTextVNode } from "./vendor.2beb0069.js";
 const _sfc_main$1 = {
   name: "HelloWorld",

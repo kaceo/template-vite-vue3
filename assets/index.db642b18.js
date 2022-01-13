@@ -1,4 +1,4 @@
-import { o as openBlock, c as createElementBlock, a as createBaseVNode, F as Fragment, r as renderList, t as toDisplayString, n as normalizeClass, b as resolveComponent, d as createVNode, e as renderSlot, w as withCtx, f as createTextVNode, g as createRouter, h as createWebHistory, i as createApp } from "./vendor.2d9d4fa8.js";
+import { o as openBlock, c as createElementBlock, a as createBaseVNode, r as resolveComponent, F as Fragment, b as renderList, t as toDisplayString, d as createBlock, w as withCtx, e as createTextVNode, n as normalizeClass, f as createVNode, g as renderSlot, h as createRouter, i as createWebHistory, j as createApp } from "./vendor.2beb0069.js";
 const p = function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -44,7 +44,7 @@ p();
 var bootstrap_min = "";
 const scriptRel = "modulepreload";
 const seen = {};
-const base = "/";
+const base = "/vite-vue/";
 const __vitePreload = function preload(baseModule, deps) {
   if (!deps || deps.length === 0) {
     return baseModule();
@@ -75,7 +75,7 @@ const __vitePreload = function preload(baseModule, deps) {
     }
   })).then(() => baseModule());
 };
-const routes = [{ "name": "about", "path": "/about", "component": () => __vitePreload(() => import("./about.0d5f6993.js"), true ? ["assets/about.0d5f6993.js","assets/vendor.2d9d4fa8.js"] : void 0), "props": true }, { "name": "contact", "path": "/contact", "component": () => __vitePreload(() => import("./contact.48306986.js"), true ? ["assets/contact.48306986.js","assets/vendor.2d9d4fa8.js"] : void 0), "props": true }, { "name": "home", "path": "/", "component": () => __vitePreload(() => import("./home.3793c767.js"), true ? ["assets/home.3793c767.js","assets/vendor.2d9d4fa8.js"] : void 0), "props": true }, { "name": "legal-privacy", "path": "/legal/privacy", "component": () => __vitePreload(() => import("./privacy.4f52aa8e.js"), true ? ["assets/privacy.4f52aa8e.js","assets/vendor.2d9d4fa8.js"] : void 0), "props": true }, { "name": "legal-terms", "path": "/legal/terms", "component": () => __vitePreload(() => import("./terms.c72db70e.js"), true ? ["assets/terms.c72db70e.js","assets/vendor.2d9d4fa8.js"] : void 0), "props": true }];
+const routes = [{ "name": "careers", "path": "/careers", "component": () => __vitePreload(() => import("./careers.e86c2dca.js"), true ? ["assets/careers.e86c2dca.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "contact", "path": "/contact", "component": () => __vitePreload(() => import("./contact.68765ac5.js"), true ? ["assets/contact.68765ac5.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "features", "path": "/about/features", "component": () => __vitePreload(() => import("./features.803be774.js"), true ? ["assets/features.803be774.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "gopremium", "path": "/gopremium", "component": () => __vitePreload(() => import("./gopremium.69849ec9.js"), true ? ["assets/gopremium.69849ec9.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "home", "path": "/", "component": () => __vitePreload(() => import("./home.e703c8d1.js"), true ? ["assets/home.e703c8d1.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "local", "path": "/local", "component": () => __vitePreload(() => import("./local.5cebfd9d.js"), true ? ["assets/local.5cebfd9d.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "about", "path": "/about", "component": () => __vitePreload(() => import("./about.9d2c3bd1.js"), true ? ["assets/about.9d2c3bd1.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "legal-privacy", "path": "/legal/privacy", "component": () => __vitePreload(() => import("./privacy.f295b14a.js"), true ? ["assets/privacy.f295b14a.js","assets/vendor.2beb0069.js"] : void 0), "props": true }, { "name": "legal-terms", "path": "/legal/terms", "component": () => __vitePreload(() => import("./terms.b9b6f1a5.js"), true ? ["assets/terms.b9b6f1a5.js","assets/vendor.2beb0069.js"] : void 0), "props": true }];
 const _hoisted_1$3 = { class: "header" };
 const _hoisted_2$3 = /* @__PURE__ */ createBaseVNode("div", { class: "container header-content" }, [
   /* @__PURE__ */ createBaseVNode("div", null, [
@@ -108,23 +108,23 @@ var HeadPanel = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", render$3]])
 var data = {
   colone: [
     {
-      href: "/features",
-      name: "Features"
-    },
-    {
-      href: "/local",
-      name: "Local"
-    },
-    {
-      href: "/gopremium",
-      name: "Subscription"
-    },
-    {
-      href: "/about",
+      nref: "about",
       name: "About"
     },
     {
-      href: "/careers",
+      nref: "features",
+      name: "Features"
+    },
+    {
+      nref: "local",
+      name: "Local"
+    },
+    {
+      nref: "gopremium",
+      name: "Subscription"
+    },
+    {
+      nref: "careers",
       name: "Careers"
     },
     {
@@ -136,11 +136,11 @@ var data = {
       name: "Business"
     },
     {
-      href: "/legal/terms",
+      nref: "legal-terms",
       name: "Terms"
     },
     {
-      href: "/legal/privacy",
+      nref: "legal-privacy",
       name: "Privacy"
     }
   ],
@@ -205,6 +205,7 @@ const _hoisted_15 = /* @__PURE__ */ createBaseVNode("h5", null, "Get Started", -
 const _hoisted_16 = { class: "list-nav" };
 const _hoisted_17 = ["href"];
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_router_link = resolveComponent("router-link");
   return openBlock(), createElementBlock("footer", _hoisted_1$2, [
     createBaseVNode("div", _hoisted_2$2, [
       createBaseVNode("div", _hoisted_3$2, [
@@ -214,9 +215,18 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("ul", _hoisted_7, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($data.menus.colone, (i) => {
               return openBlock(), createElementBlock("li", null, [
-                createBaseVNode("a", {
+                i.href ? (openBlock(), createElementBlock("a", {
+                  key: 0,
                   href: i.href
-                }, toDisplayString(i.name), 9, _hoisted_8)
+                }, toDisplayString(i.name), 9, _hoisted_8)) : (openBlock(), createBlock(_component_router_link, {
+                  key: 1,
+                  to: { name: i.nref }
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString(i.name), 1)
+                  ]),
+                  _: 2
+                }, 1032, ["to"]))
               ]);
             }), 256))
           ])
@@ -243,9 +253,18 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("ul", _hoisted_16, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($data.menus.colthree, (i) => {
               return openBlock(), createElementBlock("li", null, [
-                createBaseVNode("a", {
+                i.href ? (openBlock(), createElementBlock("a", {
+                  key: 0,
                   href: i.href
-                }, toDisplayString(i.name), 9, _hoisted_17)
+                }, toDisplayString(i.name), 9, _hoisted_17)) : (openBlock(), createBlock(_component_router_link, {
+                  key: 1,
+                  to: { name: i.nref }
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString(i.name), 1)
+                  ]),
+                  _: 2
+                }, 1032, ["to"]))
               ]);
             }), 256))
           ])
@@ -258,7 +277,8 @@ const _sfc_main$2 = {
   name: "FootMenu",
   data() {
     return {
-      "menus": data
+      "menus": data,
+      "dest": "legal-privacy"
     };
   }
 };
@@ -298,21 +318,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_Frame = resolveComponent("Frame");
   return openBlock(), createElementBlock(Fragment, null, [
     createBaseVNode("div", null, [
-      createVNode(_component_router_link, { to: "/" }, {
+      createVNode(_component_router_link, { to: { name: "home" } }, {
         default: withCtx(() => [
           _hoisted_1
         ]),
         _: 1
       }),
       _hoisted_2,
-      createVNode(_component_router_link, { to: "/about" }, {
+      createVNode(_component_router_link, { to: { name: "about" } }, {
         default: withCtx(() => [
           _hoisted_3
         ]),
         _: 1
       }),
       _hoisted_4,
-      createVNode(_component_router_link, { to: "/contact" }, {
+      createVNode(_component_router_link, { to: { name: "contact" } }, {
         default: withCtx(() => [
           _hoisted_5
         ]),
@@ -327,7 +347,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   ], 64);
 }
-const adata = [1, 2, 3];
 const _sfc_main = {
   name: "App",
   components: {
@@ -342,7 +361,7 @@ const _sfc_main = {
 };
 var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", render]]);
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/vite-vue/"),
   routes
 });
 console.log("Routes is actually", routes);

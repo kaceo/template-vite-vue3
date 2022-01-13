@@ -1,5 +1,5 @@
-import { _ as _export_sfc } from "./index.c1a06882.js";
-import { o as openBlock, c as createElementBlock, a as createBaseVNode, t as toDisplayString, F as Fragment, f as createTextVNode } from "./vendor.2d9d4fa8.js";
+import { _ as _export_sfc } from "./index.db642b18.js";
+import { o as openBlock, c as createElementBlock, a as createBaseVNode, t as toDisplayString, F as Fragment, e as createTextVNode } from "./vendor.2beb0069.js";
 const _sfc_main$1 = {
   name: "HelloWorld",
   props: {
@@ -26,7 +26,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64);
 }
 var HelloWorld = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render]]);
-var _imports_0 = "/assets/logo.03d6d6da.png";
+var _imports_0 = "/vite-vue/assets/logo.03d6d6da.png";
 const _hoisted_1 = {
   alt: "Vue logo",
   src: _imports_0
@@ -34,11 +34,13 @@ const _hoisted_1 = {
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("img", _hoisted_1);
 }
+var block0 = {};
 const _sfc_main = {
-  name: "PageHome",
   components: {
     HelloWorld
   }
 };
+if (typeof block0 === "function")
+  block0(_sfc_main);
 var home = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", render]]);
 export { home as default };

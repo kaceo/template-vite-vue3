@@ -8,8 +8,8 @@ export default {
   },
   data() {
     return {
-      menus: "this menu",
-      mlist: adata,
+      //menus: "this menu",
+      //mlist: adata,
     }
   },
 }

@@ -1,83 +1,70 @@
-const path = require('path')
+import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from "vite-plugin-pages";
-import Markdown from 'vite-plugin-md'
-import Content from '@originjs/vite-plugin-content'
-import Inspect from 'vite-plugin-inspect'
-import { VitePWA } from 'vite-plugin-pwa'
+import Yaml from '@rollup/plugin-yaml';
+import path from 'path'
 
-export default {
-  //base: '/vite-vue/',
+
+function entryPoints(...startpaths) {
+  const entries = startpaths
+    .map(path.parse)
+    .map(entry => {
+      console.log('Processing ', entry)
+    const { dir, base, name, ext } = entry;
+    const key = path.join( dir, name );
+    const path = path.resolve( __dirname, dir, base );
+      console.log('Get', key, ' and ', path)
+    return [key, path];
+  });
+  const config = Object.fromEntries(entries);
+  return config;
+}
+/*
+input: {
+  main: path.resolve(__dirname, 'index.html'),
+  'docs/index': path.resolve(__dirname, 'packages/doc/index.html'),
+},
+const entries = entryPoints(
+  'index.html',
+  'packages/doc/index.html',
+)
+*/
+const entries = {
+  'index': 'index.html',
+  'doc/index': 'packages/doc/index.html',
+}
+console.log('Entries are ',entries)
+
+
+export default defineConfig({
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
+  //==========================
+  plugins: [
+    Vue({    }),
+    Yaml(),
+  ],
+  //==========================
+  //publicDir: 'public',
+  build: {
+    rollupOptions: {
+      input: entries,
+      //output: {},
+      //plugins: [],
+    },
+    //assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 1000,
+    //reportCompressedSize: true,
+    //manifest: true,
+  },
+  //==========================
   resolve: {
     alias: {
-      '@/': `${path.resolve(__dirname, 'src')}/`,
+      '@xassets/': `${path.resolve(__dirname, 'packages/shared/assets')}/`,
+      //'@/': `${resolve(__dirname, 'src')}/`,
     },
   },
 
-  plugins: [
-    Vue({
-      include: [ /\.vue$/, /\.md$/, ],
-    }),
+})
 
-    Pages({
-      extensions: ['vue', 'md'],
-/*      dirs: [
-        { dirs: "src/pages", baseRoute: "" },
-        { dirs: "src/hidden", baseRoute: "v"},
-      ], */
-      routeBlockLang: 'yaml',
-
-    }),
-    Markdown(),
-    Content(),
-    Inspect(),
-
-    VitePWA({
-      registerType: 'autoUpdate',
-      //includeAssets: ['favicon.svg', 'robots.txt', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
-        icons: [
-        /*
-          {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
-          },
-        */
-        ],
-      },
-    }),
-
-  ],
-
-  //========================================
-
-  server: {
-    host: true,
-    // fs: {strict: true},
-  },
-  build: {
-    outDir: "dist",
-    minify: false,
-    emptyOutDir: true,
-  },
-  ssgOptions: {
-    script: 'async',
-    formatting: 'minify',
-  },
-
-}

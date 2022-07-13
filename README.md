@@ -1,79 +1,69 @@
-# VITE-VUE3 Project
+# TEMPLATE-VITE-VUE3
 
-with
-
-PUG
-
-Markdown
-
-Yaml
-
-Pages (automatic convert files/dir to Routes)
+__Basic Template for Vite, Vue3 project__
 
 
+# Vite MPA
 
----
+pnpm scripts
+  rimraf to clean
+  vitest
+  prettier (esbuild > typescript)
+  eslint
+  nodemon
+  postcss autoprefixer
 
-  // plugins
-  // root (where is index.html)
-  // base (url)
-  // mode
-  // publicDir "public" plain assets at top
-  // cacheDir node_modules/.vite
-  // assetsInclude to be static  e.g. ['**/*.gltf']
-  // logLevel info warn error silent
-  // envDir where .env
-  // envPrefix VITE_
-  // server.host true all addresses
-  // server.port 3000
-  // server.strictPort
-  // server.https
-  // server.open
-  // server.proxy
-  // server.cors
-  // server.force
-  // server.hmr
-  // server.watch
-  // server.middlewareMode
-  // server.fs.strict
-  // server.fs.allow
-  // server.fs.deny
-  // server.origin
-  // build.target
-  // build.polyfillModulePreload
-  // build.outDir dist
-  // build.assetsDir assets
-  // build.assetsInlineLimit
-  // build.cssCodeSplit true
-  // build.cssTarget
-  // build.sourcemap false
-  // build.rollupOptions
-  // build.commonjsOptions
-  // build.dynamicImportVarsOptions
-  // build.lib
-  // build.manifest false
-  // build.ssrManifest false
-  // build.ssr
-  // build.minify esbuild
-  // build.terserOptions
-  // build.write true
-  // build.emptyOutDir
-  // build.reportCompressedSize true
-  // build.chunkSizeWarningLimit
-  // build.watch
-  // preview.host
-  // preview.port
-  // preview.strictPort
-  // preview.https
-  // preview.open
-  // preview.proxy
-  // preview.cors
-  // optimizeDeps.entries
-  // optimizeDeps.excludes
-  // optimizeDeps.includes
-  // optimizeDeps.esbuildOptions
-  // ssr.external
-  // ssr.noExternal
-  // ssr.target
-  //
+zero - Vite, Vite-ssg (snowpack, gulp)
+  vite - chunk-split
+  rollup/ yaml yamljs
+  @originjs/vite-plugin-content
+  vitejs/ vue
+  pug
+  vite-plugin-md pages
+  vite-plugin-pwa
+  sitemap
+  vite-plugin compress radar inspect
+  vue-sfc-rollup
+  vite-plugin-vue-layouts -windicss
+  -vue-gql graphql urql/vue
+  loader tweaks: "import .... ?url, ?raw, ?worker ?inline"
+  loader: json. import.meta.glob('*.js')  .globEager
+  loader: wasm
+
+common -
+  sass
+  public dir
+  fontawesome @heroicons/vue
+  tailwindcss typography
+  daisyui
+  bootstrap
+  dayjs
+  chartjs
+  fast-glob fs-extra globby gray-matter
+  @vueuse / core, head component firebase integrations
+  nprogress
+  @iconify-json/carbon unplug-icons
+
+one - static site build (vuepress2)
+  vitepress
+  vitepress-theme-book
+  markdown-it regex deflist
+  markup- charts graphviz math music tables prism
+    -link-attributes
+  netlifycms (github based auth)
+  ?comment engine (github based issues)
+
+  trois= three, troisjs, tweakpane, gsap, chrome-js, cannon, nice-color-palettes, simplex-noise, stats.js
+
+
+two - SPA (vue3)
+  vue-i18n
+  firebase axios(fetch) gql
+  pinia
+  vue-router
+  rss-atom (feed)
+  (blog - collection)
+  vue-demi
+  unplug-auto-import unplug-vue-components
+  Pages (automatic convert files/dir to Routes)
 

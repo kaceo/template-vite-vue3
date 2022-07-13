@@ -6,12 +6,6 @@ export default {
   components: {
     Frame,
   },
-  data() {
-    return {
-      //menus: "this menu",
-      //mlist: adata,
-    }
-  },
 }
 </script>
 

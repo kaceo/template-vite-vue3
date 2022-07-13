@@ -19,3 +19,20 @@ import App from './App.vue'
 createApp(App)
 .use(router)
 .mount('#app')
+
+
+/*
+import { ViteSSG } from 'vite-ssg'
+export const
+createApp = ViteSSG(
+  App,
+  { routes, base: import.meta.env.BASE_URL },
+  (ctx) => {
+    Object.values(
+      import.meta.globEager('./modules/*.js')
+    )
+    .map( i => i.install?.(ctx) )
+  },
+)
+*/
+

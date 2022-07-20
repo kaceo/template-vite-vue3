@@ -1,0 +1,3 @@
+[submodule "registry-mundial"]
+        path = registry-mundial
+        url = https://github.com/tangodata/registry-tango-mundial

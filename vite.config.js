@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Yaml from '@rollup/plugin-yaml';
+import Yaml from '@rollup/plugin-yaml'
+import Pages from 'vite-plugin-pages'
+//import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
 
 
@@ -28,11 +30,37 @@ const entries = entryPoints(
   'packages/doc/index.html',
 )
 */
-const entries = {
+const mpaconfig = {
   'index': 'index.html',
-  'doc/index': 'packages/doc/index.html',
+  'packages/src/index': 'packages/src/index.html',
 }
-console.log('Entries are ',entries)
+console.log('Entries are ', mpaconfig)
+
+
+const aliasconfig = {
+  '@xassets/': `${path.resolve(__dirname, 'packages/shared/assets')}/`,
+  //'@/': `${resolve(__dirname, 'src')}/`,
+}
+
+
+const pagesconfig = {
+  extensions: ['vue'],
+  //, 'md'],
+  dirs: [
+//    { dirs: "src/pages", baseRoute: "" },
+//    { dirs: "src/hidden", baseRoute: "v"},
+    {
+      dirs: "packages/src/pages",
+      baseRoute: ""
+    },
+  ],
+  routeBlockLang: 'yaml',
+}
+
+
+
+
+
 
 
 export default defineConfig({
@@ -44,12 +72,14 @@ export default defineConfig({
   plugins: [
     Vue({    }),
     Yaml(),
+    Pages(),//pagesconfig),
+    //VitePWA(),
   ],
   //==========================
   //publicDir: 'public',
   build: {
     rollupOptions: {
-      input: entries,
+      input: mpaconfig,
       //output: {},
       //plugins: [],
     },
@@ -60,10 +90,7 @@ export default defineConfig({
   },
   //==========================
   resolve: {
-    alias: {
-      '@xassets/': `${path.resolve(__dirname, 'packages/shared/assets')}/`,
-      //'@/': `${resolve(__dirname, 'src')}/`,
-    },
+    alias: aliasconfig,
   },
 
 })

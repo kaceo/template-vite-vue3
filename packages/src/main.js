@@ -5,8 +5,13 @@ import { createApp } from 'vue'
 //import "bootstrap"
 //import './index.css'
 
-//import routes from "~pages";
-/*
+//const routes = []
+
+import routes from "~pages";
+
+
+
+
 const router = createRouter({
   // base:
   //history: createWebHashHistory(),
@@ -15,8 +20,6 @@ const router = createRouter({
 })
 
 console.log ('Routes is actually', routes)
-*/
-
 
 import App from './App.vue'
 createApp(App)

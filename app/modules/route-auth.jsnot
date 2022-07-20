@@ -1,0 +1,36 @@
+/* add middleware to routes
+
+Each route has meta: {}
+requiresAuth = true (must pass auth)
+  Profile, Database
+noAuth = true (if already loggedin, go to Home)
+  Login (/auth/login), SignUp (/auth/signup),
+  ForgotPassword(/auth/forgot-password)
+default = just route there
+  Home, NotFound
+*/
+
+export const install = ({router}) => {}
+
+  router.beforeEach(async (to, from, next) => {
+    const isAuth = await getUserState();
+
+    const requiresAuth = to.matched.some(
+      record => record.meta.requiresAuth
+    );
+
+    const noAuth = to.matched.some(
+      record => record.meta.noAuth
+    );
+
+    if (requiresAuth && !isAuth)
+      next({ name: "Login" });
+
+    else if (noAuth && isAuth)
+      next({ name: "Home" });
+
+    else
+      next();
+  });
+
+}

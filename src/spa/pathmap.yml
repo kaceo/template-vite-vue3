@@ -1,0 +1,16 @@
+-
+  file: CityHome
+  path: /city/:params(.*)*
+  name: tf-city
+-
+  file: DashHome
+  path: /dash/:params(.*)*
+  name: te-dash
+-
+  file: SpaHome
+  path: /
+  name: spa-home
+-
+  file: NotFound
+  path: /:pathMatch(.*)*
+  name: spa-unknown

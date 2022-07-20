@@ -1,0 +1,39 @@
+/*----------------------
+Site class
+----------------------*/
+
+.t-main-set {
+  @apply lg:container lg:mx-auto md:px-20 2xl:px-40;
+}
+
+.t-transition-effect {
+  @apply transition duration-500 ease-in-out;
+}
+
+/* AUTH */
+.t-auth-section {
+  @apply my-4 md:my-20 w-11/12 md:w-2/3 lg:w-3/5 mx-auto;
+}
+.t-auth-form {
+  @apply bg-secondary shadow-md rounded p-6;
+}
+/* AUTH */
+
+/* Inputs and Buttons */
+.t-input {
+  @apply shadow
+    appearance-none
+    border
+    rounded
+    p-3
+    text-black
+    leading-tight
+    focus:outline-none;
+}
+
+.t-btn {
+  @apply font-bold py-2 px-4 rounded focus:outline-none ease-linear
+  transition-all
+  duration-150 hover:bg-opacity-75;
+}
+/* Inputs and Buttons */

@@ -1,0 +1,41 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import { setupLayouts } from 'virtual:generated-layouts'
+
+
+
+import generatedRoutes from 'virtual:generated-pages'
+const routes = setupLayouts(generatedRoutes)
+
+
+const router = () => createRouter({
+  history: createWebHistory(),
+
+  //routes: routes,
+
+  extendRoutes: (routes) => {
+    setupLayouts(routes)
+  },
+
+})
+
+export { router, routes }
+
+/*
+//console.log('Routes', generatedRoutes)
+//console.log('Layouts', routes)
+
+  history
+  linkActiveClass = router-link-active
+  linkExactActiveClass = router-link-exact-active
+  parseQuery =
+  stringifyQuery =
+  routes = []
+  scrollBehavior =
+
+const catchall = {
+  path: '/:pathMatch(.*)*',
+  name: '404-catchall-layout',
+  component: () => import('@/layouts/NotFound.vue')
+}
+routes.push(catchall)
+*/

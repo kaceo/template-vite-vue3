@@ -1,69 +1,34 @@
 # TEMPLATE-VITE-VUE3
 
-__Basic Template for Vite, Vue3 project__
+Entry points:
+- Vite creates SPA build
+- Vite-ssg creates SSG build
 
+Vue3 (SFC) loads the .vue format
 
-# Vite MPA
+Vue-router provides basic routing-
 
-pnpm scripts
-  rimraf to clean
-  vitest
-  prettier (esbuild > typescript)
-  eslint
-  nodemon
-  postcss autoprefixer
+Pinia provides persistent objects
 
-zero - Vite, Vite-ssg (snowpack, gulp)
-  vite - chunk-split
-  rollup/ yaml yamljs
-  @originjs/vite-plugin-content
-  vitejs/ vue
-  pug
-  vite-plugin-md pages
-  vite-plugin-pwa
-  sitemap
-  vite-plugin compress radar inspect
-  vue-sfc-rollup
-  vite-plugin-vue-layouts -windicss
-  -vue-gql graphql urql/vue
-  loader tweaks: "import .... ?url, ?raw, ?worker ?inline"
-  loader: json. import.meta.glob('*.js')  .globEager
-  loader: wasm
+Firebase provides auth and cloud store
 
-common -
-  sass
-  public dir
-  fontawesome @heroicons/vue
-  tailwindcss typography
-  daisyui
-  bootstrap
-  dayjs
-  chartjs
-  fast-glob fs-extra globby gray-matter
-  @vueuse / core, head component firebase integrations
-  nprogress
-  @iconify-json/carbon unplug-icons
+Tailwind, Postcss, Daisyui, (+etc) provides the CSS framework
 
-one - static site build (vuepress2)
-  vitepress
-  vitepress-theme-book
-  markdown-it regex deflist
-  markup- charts graphviz math music tables prism
-    -link-attributes
-  netlifycms (github based auth)
-  ?comment engine (github based issues)
+Fontawesome (+etc) provides the svg icons
 
-  trois= three, troisjs, tweakpane, gsap, chrome-js, cannon, nice-color-palettes, simplex-noise, stats.js
+Markdown loader for MD-to-Vue Conversion
 
+Markdown-it (plugins) for features inside MD
+- markdown-it-deflist
+- markdown-it-regexp for icons
+- markdown-it-attrs for attributes and classes
 
-two - SPA (vue3)
-  vue-i18n
-  firebase axios(fetch) gql
-  pinia
-  vue-router
-  rss-atom (feed)
-  (blog - collection)
-  vue-demi
-  unplug-auto-import unplug-vue-components
-  Pages (automatic convert files/dir to Routes)
+Vite feature plugins used:
+
+- loader for YAML files
+- parser for Layout files
+- parser for File-based Page routing
+- Head insertion of data
+- Inspect for runtime inspection
+- PWA for inserting web worker
 

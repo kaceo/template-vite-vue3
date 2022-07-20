@@ -1,4 +1,4 @@
-import App from '@/App.vue'
+import Shell from '@/shell.vue'
 //import '@/styles/tailwind.css';
 
 //import { router, routes } from './modules/router.jsnot'
@@ -13,7 +13,7 @@ app.use(createHead())
 import { createApp } from 'vue'
 import { router, routes } from '@/modules/router'
 
-const app = createApp(App)
+const app = createApp(Shell)
 app.use(router)
 app.mount('#app')
 

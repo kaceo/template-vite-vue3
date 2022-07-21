@@ -10,7 +10,8 @@ module.exports = {
 
   //prefix:  (prefix tailwind stuffs)
   //
-  darkMode: 'class', //media or class
+  darkMode: 'class', //or false or media or class
+  //purge: [],
 
   theme: {
     //===============================

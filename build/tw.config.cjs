@@ -1,12 +1,14 @@
 module.exports = {
-
   content: [
-    //"../src/**/*.{vue,md,js}",
-    "../app/**/*.{vue,md,js}",
+    "../docs/**/*.{vue,md}",
+    "../app/**/*.{vue,md}",
   ],
-
-
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
+
 
 /*
     //"../src/**/*.{vue,md,js}",

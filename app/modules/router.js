@@ -10,7 +10,16 @@ console.log('Routes is: ', routes)
 */
 
 const routes = [
-  { path: '/', component: ()=>import('@/test.vue')}
+  { path: '/',
+    component: ()=>import('@/test.vue'),
+  },
+  { path: '/about',
+    component: ()=>import('@/about.md'),
+  },
+  { path: '/:pathMatch(.*)*',
+    component: ()=>import('@/layouts/NotFound.vue'),
+  },
+
 ]
 
 

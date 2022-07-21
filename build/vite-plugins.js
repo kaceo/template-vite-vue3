@@ -42,20 +42,25 @@ export const basicbuild = {
 */
 }
 
+import { mdconfig } from './md.config'
+import { pgconfig } from './pg.config'
+import { pwaconfig } from './pwa.config'
+
 export const basicpipeline = [
-  Vue({    }),
+  Vue({
+    include: [/\.vue$/, /\.md$/],
+    //reactivityTransform: true,
+  }),
   Formats(),
-  Layouts(),
-  Pages(),
-  Markdown(),
+  Markdown(mdconfig),
+
+  //Pages(),
+  //Layouts(),
   //VitePWA(),
   //Inspect(),
 ]
 
 /*
-import { mdconfig } from './md.config'
-import { pgconfig } from './pg.config'
-import { pwaconfig } from './pwa.config'
 
 export const advancedpipeline = [
   //--------------------------------------------

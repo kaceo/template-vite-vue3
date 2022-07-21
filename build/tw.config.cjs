@@ -9,6 +9,7 @@ module.exports = {
 }
 
 /*
+    //"../src/**/*.{vue,md,js}",
     "./src/pages/**/*.{vue,md,js}",
     "./src/components/**/*.{vue,md,js}",
     "./app/components/**/*.{vue,js}",

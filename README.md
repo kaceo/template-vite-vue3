@@ -32,3 +32,31 @@ Vite feature plugins used:
 - Inspect for runtime inspection
 - PWA for inserting web worker
 
+================
+
+
+
+
+//import ports from './build/ports.js'
+//import bins from './build/bins.js'
+
+//import { ssgconfig } from './build/ssg.config'
+import {
+  basicbuild,
+  //basicpipeline, // only vue
+  //advancedpipeline, // with SSG
+} from './build/vite-plugins'
+
+const me =  defineConfig({
+  //server: ports,
+  resolve: { //alias: bins.alias,
+  },
+  root: "app",//bins.rootDir,
+  //publicDir: bins.publicDir,
+  //ssgOptions: ssgconfig,
+  //build: basicbuild,
+  plugins:
+    [ Vue(), ],
+    //basicpipeline,
+    //advancedpipeline,
+})

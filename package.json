@@ -3,17 +3,19 @@
   "private": true,
   "version": "0.0.1",
   "license": "MIT",
-  "type": "module",
+  "xxtype": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "generate": "vite-ssg build",
     "preview": "vite preview",
+    "test": "node test.js",
     "serve": "ws -p 5000 -d dist -s index.html",
     "clean": "rm -Rf dist extras"
   },
   "dependencies": {
     "@headlessui/vue": "^1.6.7",
+    "dayjs": "^1.11.4",
     "firebase": "^9.9.0",
     "pinia": "^2.0.16",
     "vue": "^3.2.37",
@@ -50,6 +52,8 @@
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-pages-sitemap": "^1.2.2",
     "vite-plugin-pwa": "^0.12.3",
+    "vite-plugin-radar": "^0.4.2",
+    "vite-plugin-simple-gql": "^0.5.0",
     "vite-plugin-vue-layouts": "^0.6.0",
     "vite-ssg": "^0.20.2",
     "vite-ssg-sitemap": "^0.3.1"
@@ -84,7 +88,5 @@
     "vite-plugin-pwa": "^0.12.3",
     "vite-ssg": "^0.20.2"
   },
-  "pnpm": {
-
-  }
+  "pnpm": {}
 }

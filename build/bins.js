@@ -1,48 +1,41 @@
 import path from 'path'
 const r = (n) => path.resolve(__dirname, n)
 
-const spa_name = 'app'
-const dist_name = 'dist'
-
-
-let dist_dir = r('../' + dist_name)
-
 export default {
   alias: {
-    '@/': `${ r('../app') }/`,
-    '@shared/': `${ r('../app') }/`,
+    '@/':    `${ r('../app') }/`,
+    //'@shared/': `${ r('../app') }/`,
   },
 
-//============================
-// shared by both environment
-  publicDir: r('../app/public'),
-  // .nojekyll, CNAME, favicons,
+  outDir:    r('../dist'),
 
-  cdnDir: r('../app/cdn'),
-  // cdn cacheable stuffs
+  inDir:     r('../docs/pages'),
 
-  extraDir: r('../app/extras'),
-  // writable during build
-  // sitemap.xml, robots.txt
-  // atom, pwa, etc
-
-  // layout vue files for Layout plugin
+  rootDir:   r('../app'),
   layoutDir: r('../app/layouts'),
+  publicDir: r('../app/public'),
+  cdnDir:    r('../app/cdn'),
+  extraDir:  r('../app/extras'),
 
+}
+
+
+
+/*
 //============================
 // ssg (vitepress)
   ssg: {
     inDir: r('../ssg'), // static site source
-    outDir: dist_dir,
+    outDir: r('../dist'),
   },
 
 //============================
 // spa (vite+vue)
   spa: {
     inDir: r('../spa'), // spa vue3 source
-    outDir: dist_dir,
-    root: spa_name,
+    outDir: r('../dist'),
     pagesDir: r('../spa/pages')
+    root: 'spa',
   },
-}
 
+*/

@@ -16,6 +16,7 @@ specifiers:
   '@vueuse/head': ^0.7.6
   autoprefixer: ^10.4.7
   daisyui: ^2.19.0
+  dayjs: ^1.11.4
   firebase: ^9.9.0
   happy-dom: ^6.0.4
   markdown-it: ^13.0.1
@@ -33,6 +34,8 @@ specifiers:
   vite-plugin-pages: ^0.25.0
   vite-plugin-pages-sitemap: ^1.2.2
   vite-plugin-pwa: ^0.12.3
+  vite-plugin-radar: ^0.4.2
+  vite-plugin-simple-gql: ^0.5.0
   vite-plugin-vue-layouts: ^0.6.0
   vite-ssg: ^0.20.2
   vite-ssg-sitemap: ^0.3.1
@@ -42,6 +45,7 @@ specifiers:
 
 dependencies:
   '@headlessui/vue': 1.6.7_vue@3.2.37
+  dayjs: 1.11.4
   firebase: 9.9.0
   pinia: 2.0.16_vue@3.2.37
   vue: 3.2.37
@@ -78,6 +82,8 @@ devDependencies:
   vite-plugin-pages: 0.25.0_vite@3.0.2
   vite-plugin-pages-sitemap: 1.2.2
   vite-plugin-pwa: 0.12.3_vite@3.0.2
+  vite-plugin-radar: 0.4.2_vite@3.0.2
+  vite-plugin-simple-gql: 0.5.0
   vite-plugin-vue-layouts: 0.6.0_i5f576xweswtg2nbfti5sqkk7q
   vite-ssg: 0.20.2_bc535nzjtcqlryzrekyvursaoq
   vite-ssg-sitemap: 0.3.1
@@ -2887,6 +2893,10 @@ packages:
       whatwg-url: 11.0.0
     dev: true
 
+  /dayjs/1.11.4:
+    resolution: {integrity: sha512-Zj/lPM5hOvQ1Bf7uAvewDaUcsJoI6JmNqmHhHl3nyumwe0XHwt8sWdOVAPACJzCebL8gQCi+K49w7iKWnGwX9g==}
+    dev: false
+
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
@@ -5594,6 +5604,20 @@ packages:
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
+    dev: true
+
+  /vite-plugin-radar/0.4.2_vite@3.0.2:
+    resolution: {integrity: sha512-da1mm6nF47PAQyxaMQ7GQgLSgznR1uWnbz7J3mPHHSV9HUMx1ngn4MCB8Jppt/Xmdk99xA6s9z1m4+wJvPrvMQ==}
+    peerDependencies:
+      vite: ^2.0.0
+    dependencies:
+      vite: 3.0.2_sass@1.53.0
+    dev: true
+
+  /vite-plugin-simple-gql/0.5.0:
+    resolution: {integrity: sha512-zQUVhlkqwP07NcccLkw+sd6Z7LN7NXfyfxdFJRVUo3m7sdu797FXnsW9Q6LihpsYGgI/uClKZzAF5oyor+VqRQ==}
+    peerDependencies:
+      graphql-tag: ^2.12.6
     dev: true
 
   /vite-plugin-vue-layouts/0.6.0_i5f576xweswtg2nbfti5sqkk7q:

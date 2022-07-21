@@ -1,55 +1,5 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*-----------------------
-Some sensible defaults
-using colors from
-primary, (sky)
-secondary, (slate)
-error (red)
------------------------*/
-
-body {@apply
-  bg-secondary/90 text-white font-text;
-}
-
-@layer base {
-  h1 {@apply
-    text-xl md:text-3xl
-    font-bold
-    font-heading;
-  }
-  h2 {@apply
-    text-xl md:text-2xl
-    font-heading;
-  }
-  h3 {@apply
-    text-base md:text-lg
-    font-text;
-  }
-  h4 {@apply
-    text-xs md:text-lg
-    font-heading;
-  }
-  h5 {@apply
-    text-xs md:text-base
-    font-text;
-  }
-  hr {@apply
-    border-primary
-    mt-1 my-4;
-  }
-}
-
-/* vue-routers */
-
-.router-link-active {@apply
-  bg-primary;
-}
-
-/* markdown */
-
-
-
 

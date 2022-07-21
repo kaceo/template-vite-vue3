@@ -1,6 +1,4 @@
-import Shell from '@/shell.vue'
-//import '@/styles/tailwind.css';
-
+//import '@/styles/tailwind.css'
 //import { router, routes } from './modules/router.jsnot'
 //import { createPinia } from 'pinia'
 
@@ -11,8 +9,11 @@ app.use(createHead())
 -------------------------------*/
 
 import { createApp } from 'vue'
-import { router, routes } from '@/modules/router'
+//import { router, routes } from '@/modules/router'
+import { router } from './modules/router'
 
+
+import Shell from './shell.vue'
 const app = createApp(Shell)
 app.use(router)
 app.mount('#app')

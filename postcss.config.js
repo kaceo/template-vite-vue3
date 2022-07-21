@@ -1,6 +1,10 @@
 module.exports = {
-  tailwindcss: {
-//      config: './build/tw.config.js'
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
   },
-  autoprefixer: {},
 }
+
+
+
+//    config: './build/tw.config'

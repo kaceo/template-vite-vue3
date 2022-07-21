@@ -2,11 +2,13 @@
   "name": "vpplus",
   "version": "1.0.0",
   "license": "ISC",
+  "type": "module",
   "scripts": {
     "dev": "vite dev ",
     "preview": "vite preview",
     "build": "vite build ",
     "generate": "vite-ssg build",
+    "test": "node test.js",
     "serve": "ws -p 5000 -d dist -s index.html",
     "clean": "rm -Rf dist extras"
   },

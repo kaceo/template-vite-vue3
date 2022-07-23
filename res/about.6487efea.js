@@ -1,0 +1,1 @@
+import{o as e,c as o,b as t}from"./index.d444ff79.js";const s={class:"container p-4 border"},c=t("h1",null,"About Me",-1),a=[c],i={__name:"about",setup(_){return(n,r)=>(e(),o("div",s,a))}};export{i as default};

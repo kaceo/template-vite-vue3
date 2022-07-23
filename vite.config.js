@@ -7,6 +7,7 @@ import { basicbuild, basicpipeline,
 } from './build/vite-plugins'
 
 export default defineConfig({
+  base: '/template-vite/vue3/',
   server: ports,
   resolve: { alias: bins.alias, },
   root: bins.rootDir,

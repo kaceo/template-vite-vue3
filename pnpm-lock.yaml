@@ -5,7 +5,7 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': ^6.1.1
   '@fortawesome/free-regular-svg-icons': ^6.1.1
   '@fortawesome/free-solid-svg-icons': ^6.1.1
-  '@fortawesome/vue-fontawesome': ^2.0.8
+  '@fortawesome/vue-fontawesome': ^3.0.1
   '@headlessui/vue': ^1.6.7
   '@intlify/vite-plugin-vue-i18n': ^5.0.0
   '@originjs/vite-plugin-content': ^1.0.1
@@ -18,6 +18,8 @@ specifiers:
   daisyui: ^2.19.0
   dayjs: ^1.11.4
   firebase: ^9.9.0
+  graphql: 16.4.0
+  graphql-tag: ^2.12.6
   happy-dom: ^6.0.4
   markdown-it: ^13.0.1
   pinia: ^2.0.16
@@ -57,7 +59,7 @@ devDependencies:
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/free-regular-svg-icons': 6.1.1
   '@fortawesome/free-solid-svg-icons': 6.1.1
-  '@fortawesome/vue-fontawesome': 2.0.8_u4vq2zlnk6o5gih5o4cnqmjgea
+  '@fortawesome/vue-fontawesome': 3.0.1_u4vq2zlnk6o5gih5o4cnqmjgea
   '@intlify/vite-plugin-vue-i18n': 5.0.0_vite@3.0.2+vue-i18n@9.1.10
   '@originjs/vite-plugin-content': 1.0.1
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.6
@@ -67,6 +69,8 @@ devDependencies:
   '@vueuse/head': 0.7.6_vue@3.2.37
   autoprefixer: 10.4.7_postcss@8.4.14
   daisyui: 2.19.0_ugi4xkrfysqkt4c4y6hkyfj344
+  graphql: 16.4.0
+  graphql-tag: 2.12.6_graphql@16.4.0
   happy-dom: 6.0.4
   markdown-it: 13.0.1
   postcss: 8.4.14
@@ -83,7 +87,7 @@ devDependencies:
   vite-plugin-pages-sitemap: 1.2.2
   vite-plugin-pwa: 0.12.3_vite@3.0.2
   vite-plugin-radar: 0.4.2_vite@3.0.2
-  vite-plugin-simple-gql: 0.5.0
+  vite-plugin-simple-gql: 0.5.0_graphql-tag@2.12.6
   vite-plugin-vue-layouts: 0.6.0_i5f576xweswtg2nbfti5sqkk7q
   vite-ssg: 0.20.2_bc535nzjtcqlryzrekyvursaoq
   vite-ssg-sitemap: 0.3.1
@@ -1759,11 +1763,11 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.1.1
     dev: true
 
-  /@fortawesome/vue-fontawesome/2.0.8_u4vq2zlnk6o5gih5o4cnqmjgea:
-    resolution: {integrity: sha512-SRmP0q9Ox4zq8ydDR/hrH+23TVU1bdwYVnugLVaAIwklOHbf56gx6JUGlwES7zjuNYqzKgl8e39iYf6ph8qSQw==}
+  /@fortawesome/vue-fontawesome/3.0.1_u4vq2zlnk6o5gih5o4cnqmjgea:
+    resolution: {integrity: sha512-CdXZJoCS+aEPec26ZP7hWWU3SaJlQPZSCGdgpQ2qGl2HUmtUUNrI3zC4XWdn1JUmh3t5OuDeRG1qB4eGRNSD4A==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
-      vue: ~2
+      vue: '>= 3.0.0 < 4'
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.1.1
       vue: 3.2.37
@@ -3609,6 +3613,21 @@ packages:
 
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
+    dev: true
+
+  /graphql-tag/2.12.6_graphql@16.4.0:
+    resolution: {integrity: sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.4.0
+      tslib: 2.4.0
+    dev: true
+
+  /graphql/16.4.0:
+    resolution: {integrity: sha512-tYDNcRvKCcfHREZYje3v33NSrSD/ZpbWWdPtBtUUuXx9NCo/2QDxYzNqCnMvfsrnbwRpEHMovVrPu/ERoLrIRg==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: true
 
   /gray-matter/4.0.3:
@@ -5614,10 +5633,12 @@ packages:
       vite: 3.0.2_sass@1.53.0
     dev: true
 
-  /vite-plugin-simple-gql/0.5.0:
+  /vite-plugin-simple-gql/0.5.0_graphql-tag@2.12.6:
     resolution: {integrity: sha512-zQUVhlkqwP07NcccLkw+sd6Z7LN7NXfyfxdFJRVUo3m7sdu797FXnsW9Q6LihpsYGgI/uClKZzAF5oyor+VqRQ==}
     peerDependencies:
       graphql-tag: ^2.12.6
+    dependencies:
+      graphql-tag: 2.12.6_graphql@16.4.0
     dev: true
 
   /vite-plugin-vue-layouts/0.6.0_i5f576xweswtg2nbfti5sqkk7q:

@@ -1,0 +1,1 @@
+import{a as n,o as t,c as r,b as e,d as o,F as s,q as c}from"./index.6a0efa83.js";const _=e("h1",null,"TangoSingapore LAYOUT",-1),l=e("h2",null,"Welcome to Singapore",-1),d={__name:"SGLayout",setup(u){return(i,m)=>{const a=n("router-view");return t(),r(s,null,[_,l,e("main",null,[o(a)]),o(c)],64)}}};export{d as default};

@@ -1,1 +1,0 @@
-import{_ as o,o as n,c as t}from"./index.d444ff79.js";const c={},e={};function _(r,s){return n(),t("span",null,"NOT FOUND")}typeof c=="function"&&c(e);const f=o(e,[["render",_]]);export{f as default};

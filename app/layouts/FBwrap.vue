@@ -20,16 +20,18 @@
 import Navbar from "@/components/chrome/Navbar.vue"
 import Footer from "@/components/chrome/Footer.vue"
 import Loading from "@/components/chrome/Loading.vue"
-import { getUserState } from "@/firebase"
+//import { getUserState } from "@/firebase"
 import { ref } from "vue"
 
 const name = "FBwrap"
-const isLoading = ref(true)
+const isLoading = ref(false)
+//ref(true)
 
+/*
 getUserState().then(() => {
   isLoading.value = false
 })
-
+*/
 </script>
 
 <style scoped>

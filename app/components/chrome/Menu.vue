@@ -62,8 +62,9 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-import { useAuthState, useSignOut } from "@/firebase";
-const { isAuthenticated } = useAuthState();
+//import { useAuthState, useSignOut } from "@/firebase";
+//const { isAuthenticated } = useAuthState();
+const isAuthenticated = false
 
 const menuAuth = [
   { name: "Home", link: { name: "Home" } },
@@ -83,15 +84,15 @@ const toggle = () => {
 };
 
 const signOutUser = async () => {
-  toggle();
-  await useSignOut();
-  await router.replace({ name: "Login" });
+//  toggle();
+//  await useSignOut();
+//  await router.replace({ name: "Login" });
 };
 </script>
 
 <style lang="postcss" scoped>
 .menu-button {@apply
-  py-2 px-4 ml-2 font-heading rounded bg-primary
+  py-2 px-4 ml-2 rounded bg-primary
   hover:bg-opacity-75;
 }
 .fade-enter-active,

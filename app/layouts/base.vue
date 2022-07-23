@@ -1,10 +1,8 @@
 <template lang="pug">
-
 h1 Base Layout (for the whole site)
 
 main
   router-view
-
 quicknav
 </template>
 

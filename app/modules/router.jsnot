@@ -38,4 +38,13 @@ const catchall = {
   component: () => import('@/layouts/NotFound.vue')
 }
 routes.push(catchall)
+
+
+  router.beforeEach((to, from. next) => {
+    const store = useRootStore(pinia)
+    if (!store.ready)
+      store.initialize()
+    next()
+  })
+
 */

@@ -10,7 +10,8 @@ default = just route there
   Home, NotFound
 */
 
-export const install = ({router}) => {}
+export const install =
+({router}) => {
 
   router.beforeEach(async (to, from, next) => {
     const isAuth = await getUserState();
@@ -31,6 +32,17 @@ export const install = ({router}) => {}
 
     else
       next();
-  });
+  }
 
 }
+
+/*
+  router.beforeEach((to, from. next) => {
+    const store = useRootStore(pinia)
+    if (!store.ready)
+      store.initialize()
+    next()
+  })
+
+*/
+

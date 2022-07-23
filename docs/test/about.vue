@@ -1,6 +1,6 @@
 <template lang="pug">
 .container.p-4.border
-  router-view
+  h1 About Me
 </template>
 
 <script setup>

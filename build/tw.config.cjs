@@ -11,16 +11,41 @@ module.exports = {
 
 
 /*
-    //"../src/**/*.{vue,md,js}",
-    "./src/pages/**/*.{vue,md,js}",
-    "./src/components/**/*.{vue,md,js}",
-    "./app/components/**/*.{vue,js}",
-    "./app/layouts/**/*.{vue,js}",
-    //"./app/App.vue",
-    //"./index.html",
+module.exports = {
+  content: [
+    "./docs/**/*.{vue,md}",
+    "./app/**/*.{vue,md}",
+  ],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/forms'),
+    require('daisyui'),
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {},
+  },
+}
 
-    presets: {
-      //require('./preset.tailwind')
+//or false or media or class
+  presets: {
+    require('/build/preset.tailwind.cjs')
+  },
+  presets: {
+    //require('./preset.tailwind.cjs')
+  },
+theme: {
+  extend: {},
+},
+plugins: [],
+
+  require('nightwind'),
+  theme: {
+    nightwind: {
+      typography: true,
+      transitionDuration: false,
     },
+  },
 
 */

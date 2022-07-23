@@ -3,13 +3,11 @@
   "private": true,
   "version": "0.0.1",
   "license": "MIT",
-  "xxtype": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "generate": "vite-ssg build",
     "preview": "vite preview",
-    "test": "node test.js",
     "serve": "ws -p 5000 -d dist -s index.html",
     "clean": "rm -Rf dist extras"
   },
@@ -57,36 +55,6 @@
     "vite-plugin-vue-layouts": "^0.6.0",
     "vite-ssg": "^0.20.2",
     "vite-ssg-sitemap": "^0.3.1"
-  },
-  "ext-dependencies": {
-    "@popperjs/core": "^2.11.5",
-    "@vueuse/components": "^8.9.2",
-    "@vueuse/core": "^8.9.2",
-    "@vueuse/firebase": "^8.9.2",
-    "@vueuse/integrations": "^8.9.2",
-    "axios": "^0.27.2",
-    "bootstrap": "^5.1.3",
-    "vue": "^3.2.37",
-    "vue-i18n": "^9.1.10",
-    "vue-router": "^4.1.2"
-  },
-  "ext-devDependencies": {
-    "@rollup/plugin-yaml": "^3.1.0",
-    "@originjs/vite-plugin-content": "^1.0.1",
-    "@vitejs/plugin-vue": "^2.3.3",
-    "@vueuse/head": "^0.7.6",
-    "firebase": "^9.9.0",
-    "happy-dom": "^6.0.3",
-    "markdown-it": "^13.0.1",
-    "prismjs": "^1.28.0",
-    "pug": "^3.0.2",
-    "sass": "^1.53.0",
-    "vite": "^2.9.14",
-    "vite-plugin-inspect": "^0.5.1",
-    "vite-plugin-md": "^0.18.1",
-    "vite-plugin-pages": "^0.25.0",
-    "vite-plugin-pwa": "^0.12.3",
-    "vite-ssg": "^0.20.2"
   },
   "pnpm": {}
 }

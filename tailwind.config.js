@@ -10,18 +10,6 @@ module.exports = {
     require('daisyui'),
   ],
   darkMode: 'class',
+  theme: { extend: {}, },
 }
 
-/*
-//or false or media or class
-  presets: {
-    require('/build/preset.tailwind.cjs')
-  },
-  presets: {
-    //require('./preset.tailwind.cjs')
-  },
-theme: {
-  extend: {},
-},
-plugins: [],
-*/

@@ -25,34 +25,23 @@ const sitemap = async(routes) => {
 }
 
 export const pgconfig = {
+  dirs: [
+    { dir: bins.testDir, baseRoute: '' },
+  ],
   extensions: ['vue', 'md'],
   routeBlockLang: 'yaml',
   //onRoutesGenerated: sitemap,
 }
 
 /*
+    //{ dir: bins.siteDir, baseRoute: 'site' },
+    //{ dir: bins.playDir, baseRoute: 'play' },
   //dirs: [
   //  { dir: bins.spa.pagesDir, baseRoute: '' },
   //],
   //syncIndex: false,
   //routeStyle: 'next',
 
-
-  //----------------------------------------------------
-  //refer https://github.com/hannoeru/vite-plugin-pages
-  //vite-plugin-pages (~pages)
-  Pages(pgconfig),
-  {
-    dirs: [
-      { dir: bins.spa.pagesDir, baseRoute: '' },
-    ],
-  }),
-
-  // pagesDir: 'src/pages',
-  //dirs: [
-  //  { dir: bins.spa.pagesDir, baseRoute: '' },
-  //],
-  //syncIndex: false,
 
     //--------------------------------------------
     //-- virtual generator for file-based routing

@@ -1,74 +1,45 @@
 import '@/styles/tailwind.css'
-
-//import { router, routes } from './modules/router.jsnot'
-//import { createPinia } from 'pinia'
-
-/*-------------------------------
-SPA mode using Vite
-import { createHead } from '@vueuse/head'
-app.use(createHead())
--------------------------------*/
-
-import { createApp } from 'vue'
-//import { router, routes } from '@/modules/router'
-
-import { router } from './modules/router'
+import '@/styles/site.css'
 
 
-import Shell from './App.vue'
-const app = createApp(Shell)
-app.use(router)
-app.mount('#app')
-
-
-/*-------------------------------
-SSG mode using Vite-ssg
-
+import AppShell from './App.vue'
+import { routes } from '@/modules/router'
 import { ViteSSG } from 'vite-ssg'
-import { router, routes } from '@/modules/router'
 
 export const createApp = ViteSSG(
-  App,
-  {
-   // routes: router.getRoutes(),
-    routes: routes,
-    //base: import.meta.env.BASE_URL
-  },
+  AppShell,
+  { routes: routes, },
   async ctx => {
     Object.values(
-      import.meta.glob('./modules/*.js', { eager: true })
+      import.meta.glob('./modules/*.install.js', { eager: true })
     ).map(i => i.install?.(ctx))
   },
   {},
 )
 
+
+/*-------------------------------
+SSG mode using Vite-ssg
+//routes: router.getRoutes(),
+//base: import.meta.env.BASE_URL
+ -------------------------------*/
+/*-------------------------------
+SPA mode using Vite
+
+import { createApp } from 'vue'
+const app = createApp(AppShell)
+
+import { createRouter, createWebHistory } from 'vue-router'
+const router = createRouter({
+  history: createWebHistory(),
+  routes: routes,
+})
+//extendRoutes: (routes) => setupLayouts(routes),
+app.use(router)
+
+import { createHead } from '@vueuse/head'
+app.use(createHead())
+
+app.mount('#app')
 -------------------------------*/
 
-/*-------------------------------*/
-/*
-  ctx  = {
-  app, router, routes,
-  isClient, initialState,
-  onSSRAppRendered,
-  })
-
-  const pinia = createPinia()
-  app.use(pinia)
-  if (import.meta.env.SSR) {
-    initialState.pinia = pinia.state.value
-  }
-  else {
-    pinia.state.value = initialState.pinia || {}
-  }
-
-  router.beforeEach((to, from. next) => {
-    const store = useRootStore(pinia)
-    if (!store.ready)
-      store.initialize()
-    next()
-  })
-
-<ClientOnly> component transports js to client
-useHead({ title:, meta: }) - from '@vueuse/head'
-critters = critial css
-*/

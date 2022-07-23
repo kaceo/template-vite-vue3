@@ -10,6 +10,10 @@ export default {
   outDir:    r('../dist'),
 
   inDir:     r('../docs/pages'),
+  testDir:   r('../docs/test'),
+  siteDir:   r('../docs/site'),
+  playDir:   r('../docs/play'),
+
 
   rootDir:   r('../app'),
   layoutDir: r('../app/layouts'),

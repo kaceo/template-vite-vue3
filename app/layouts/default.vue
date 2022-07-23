@@ -1,8 +1,7 @@
 <template lang="pug">
-h1 DEFAULT LAYOUT
-
+i DEFAULT LAYOUT
 quicknav
-main
+main.p-4.border
   router-view
 </template>
 

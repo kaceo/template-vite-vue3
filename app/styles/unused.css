@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /*-----------------------
 Some sensible defaults
 using colors from
@@ -49,7 +45,3 @@ body {@apply
 }
 
 /* markdown */
-
-
-
-

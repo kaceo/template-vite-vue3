@@ -67,12 +67,13 @@ import Menu from "./Menu.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-import { useAuthState, useSignOut } from "@/firebase";
-const { user } = useAuthState();
+//import { useAuthState, useSignOut } from "@/firebase";
+//const { user } = useAuthState();
+const user = {}
 
 const signOutUser = async () => {
-  await useSignOut();
-  await router.replace({ name: "Login" });
+//  await useSignOut();
+//  await router.replace({ name: "Login" });
 };
 
 const goToHome = () => {
@@ -89,7 +90,7 @@ const goToHome = () => {
   backdrop-filter backdrop-blur-sm;
 }
 .nav-link {@apply
-  py-2 px-4 ml-2 font-heading rounded
+  py-2 px-4 ml-2 rounded
   hover:bg-primary;
 }
 </style>

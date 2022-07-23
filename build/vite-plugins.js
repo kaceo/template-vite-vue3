@@ -1,12 +1,12 @@
 /* this file performs all the plugins */
 import bins from './bins.js'
 
-//import Yaml from '@rollup/plugin-yaml'
 import Formats from '@originjs/vite-plugin-content'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Markdown from 'vite-plugin-md'
+
 //import { VitePWA } from 'vite-plugin-pwa'
 //import Inspect from 'vite-plugin-inspect'
 //@intlify/vite-plugin-vue-i18n
@@ -16,6 +16,7 @@ import Markdown from 'vite-plugin-md'
 //"vite-ssg-sitemap"
 // simple-gql
 // radar
+//import Yaml from '@rollup/plugin-yaml'
 
 
 export const basicbuild = {
@@ -26,6 +27,7 @@ export const basicbuild = {
   chunkSizeWarningLimit: 1024,
   //assetsInlineLimit: 4096,
   //manifest: true,
+}
 
 /*
   rollupOptions: {
@@ -40,27 +42,19 @@ export const basicbuild = {
     //plugins: [],
   },
 */
-}
 
 import { mdconfig } from './md.config'
 import { pgconfig } from './pg.config'
 import { pwaconfig } from './pwa.config'
 
 export const basicpipeline = [
-  Vue({
-    include: [/\.vue$/, /\.md$/],
-    //reactivityTransform: true,
-  }),
-  Formats(),
+  Pages(pgconfig),
+  Layouts({layoutsDirs: bins.layoutDir,}),
   Markdown(mdconfig),
-
-  //Pages(),
-  //Layouts(),
-  //VitePWA(),
-  //Inspect(),
+  Vue({ include: [/\.vue$/, /\.md$/], }),
+  Formats(),
 ]
 
-/*
 
 export const advancedpipeline = [
   //--------------------------------------------
@@ -95,4 +89,3 @@ export const advancedpipeline = [
   //VitePWA(pwaconfig),
   //Inspect(),
 ]
-*/

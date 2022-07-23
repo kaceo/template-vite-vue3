@@ -14,7 +14,8 @@ const messages = Object.fromEntries(
   })
 );
 
-export const install = ({ app }) => {
+export const install =
+({ app }) => {
   const i18n = createI18n({
     legacy: false,
     locale: 'en',

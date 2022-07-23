@@ -17,16 +17,16 @@ jobs:
         # persist-credentials: false
         submodules: true
 
-    - uses: pnpm/action-setup@v2
+    #- uses: pnpm/action-setup@v2
 
     - name: Node Environment 🔧
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
-        cache: pnpm
+        # cache: pnpm
 
-    - name: install
-      run: pnpm install
+    - name: install npm
+      run: npm install
 
     - name: Build Static Site 🔧
       run: npm run-script build
